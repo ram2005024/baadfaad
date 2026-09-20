@@ -42,7 +42,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "config.urls"
-
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+SPECTACULAR_SETTINGS = {
+    "TITLE": "BaadFaad APIS",
+    "DESCRIPTION": "APIS for the baadfaad application",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
