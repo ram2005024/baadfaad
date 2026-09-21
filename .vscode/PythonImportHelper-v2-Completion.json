@@ -1,0 +1,1103 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "extend_schema",
+        "importPath": "drf_spectacular.utils",
+        "description": "drf_spectacular.utils",
+        "isExtraImport": true,
+        "detail": "drf_spectacular.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "exception_handler",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "importPath": "config.env",
+        "description": "config.env",
+        "isExtraImport": true,
+        "detail": "config.env",
+        "documentation": {}
+    },
+    {
+        "label": "env",
+        "importPath": "config.env",
+        "description": "config.env",
+        "isExtraImport": true,
+        "detail": "config.env",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "environ",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "environ",
+        "description": "environ",
+        "detail": "environ",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "SpectacularAPIView",
+        "importPath": "drf_spectacular.views",
+        "description": "drf_spectacular.views",
+        "isExtraImport": true,
+        "detail": "drf_spectacular.views",
+        "documentation": {}
+    },
+    {
+        "label": "SpectacularSwaggerView",
+        "importPath": "drf_spectacular.views",
+        "description": "drf_spectacular.views",
+        "isExtraImport": true,
+        "detail": "drf_spectacular.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationFailed",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "NotAuthenticated",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionDenied",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "Panel",
+        "importPath": "rich.panel",
+        "description": "rich.panel",
+        "isExtraImport": true,
+        "detail": "rich.panel",
+        "documentation": {}
+    },
+    {
+        "label": "Table",
+        "importPath": "rich.table",
+        "description": "rich.table",
+        "isExtraImport": true,
+        "detail": "rich.table",
+        "documentation": {}
+    },
+    {
+        "label": "Table",
+        "importPath": "rich.table",
+        "description": "rich.table",
+        "isExtraImport": true,
+        "detail": "rich.table",
+        "documentation": {}
+    },
+    {
+        "label": "AppException",
+        "importPath": "core.exceptions.base",
+        "description": "core.exceptions.base",
+        "isExtraImport": true,
+        "detail": "core.exceptions.base",
+        "documentation": {}
+    },
+    {
+        "label": "console",
+        "importPath": "core.logging.logger",
+        "description": "core.logging.logger",
+        "isExtraImport": true,
+        "detail": "core.logging.logger",
+        "documentation": {}
+    },
+    {
+        "label": "console",
+        "importPath": "core.logging.logger",
+        "description": "core.logging.logger",
+        "isExtraImport": true,
+        "detail": "core.logging.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Console",
+        "importPath": "rich.console",
+        "description": "rich.console",
+        "isExtraImport": true,
+        "detail": "rich.console",
+        "documentation": {}
+    },
+    {
+        "label": "Theme",
+        "importPath": "rich.theme",
+        "description": "rich.theme",
+        "isExtraImport": true,
+        "detail": "rich.theme",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "importPath": "rich.traceback",
+        "description": "rich.traceback",
+        "isExtraImport": true,
+        "detail": "rich.traceback",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "rich.text",
+        "description": "rich.text",
+        "isExtraImport": true,
+        "detail": "rich.text",
+        "documentation": {}
+    },
+    {
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
+        "isExtraImport": true,
+        "detail": "rest_framework.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "success_response",
+        "importPath": "core.responses.api_response",
+        "description": "core.responses.api_response",
+        "isExtraImport": true,
+        "detail": "core.responses.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "BasePermission",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"baadfaad\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"baadfaad\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"baadfaad\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"baadfaad\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"baadfaad\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "UserConfig",
+        "kind": 6,
+        "importPath": "apps.user.apps",
+        "description": "apps.user.apps",
+        "peekOfCode": "class UserConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"apps.user\"\n    label = \"users\"\n    verbose_name = \"Users\"\n    def ready(self):\n        pass  # import apps.<name>.signals here when needed",
+        "detail": "apps.user.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "apps.user.urls",
+        "description": "apps.user.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"list/\", UserListView.as_view(), name=\"user-list\"),\n    path(\"detail/<int:pk>/\", UserDetailView.as_view(), name=\"user-detail\"),\n]",
+        "detail": "apps.user.urls",
+        "documentation": {}
+    },
+    {
+        "label": "UserListView",
+        "kind": 6,
+        "importPath": "apps.user.views",
+        "description": "apps.user.views",
+        "peekOfCode": "class UserListView(APIView):\n    @extend_schema(tags=[\"Users\"])\n    def get(self, request):\n        return Response({\"users\": []})\nclass UserDetailView(APIView):\n    @extend_schema(tags=[\"Users\"])\n    def get(self, request, pk):\n        return Response({\"user_id\": pk})",
+        "detail": "apps.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserDetailView",
+        "kind": 6,
+        "importPath": "apps.user.views",
+        "description": "apps.user.views",
+        "peekOfCode": "class UserDetailView(APIView):\n    @extend_schema(tags=[\"Users\"])\n    def get(self, request, pk):\n        return Response({\"user_id\": pk})",
+        "detail": "apps.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "SECRET_KEY = env(\"SECRET_KEY\")\nDEBUG = env(\"DEBUG\")\nROOT_URLCONF = \"config.urls\"\nWSGI_APPLICATION = \"config.wsgi.application\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# ── Apps ──────────────────────────────────────────────────────────────\nDJANGO_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "DEBUG = env(\"DEBUG\")\nROOT_URLCONF = \"config.urls\"\nWSGI_APPLICATION = \"config.wsgi.application\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# ── Apps ──────────────────────────────────────────────────────────────\nDJANGO_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "ROOT_URLCONF = \"config.urls\"\nWSGI_APPLICATION = \"config.wsgi.application\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# ── Apps ──────────────────────────────────────────────────────────────\nDJANGO_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "WSGI_APPLICATION = \"config.wsgi.application\"\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# ── Apps ──────────────────────────────────────────────────────────────\nDJANGO_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# ── Apps ──────────────────────────────────────────────────────────────\nDJANGO_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n]",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DJANGO_APPS",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "DJANGO_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n]\nTHIRD_PARTY_APPS = [\n    \"rest_framework\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "THIRD_PARTY_APPS",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "THIRD_PARTY_APPS = [\n    \"rest_framework\",\n    \"rest_framework_simplejwt\",\n    \"corsheaders\",\n    \"django_filters\",\n    \"drf_spectacular\",\n]\nLOCAL_APPS: list[str] = [\"apps.user\"]\nINSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS\n# ── Middleware ────────────────────────────────────────────────────────",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS\n# ── Middleware ────────────────────────────────────────────────────────\nMIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"core.logging.middleware.RequestLoggingMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"core.logging.middleware.RequestLoggingMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [BASE_DIR / \"templates\"],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": env(\"DB_NAME\"),\n        \"USER\": env(\"DB_USER\"),\n        \"PASSWORD\": env(\"DB_PASSWORD\"),\n        \"HOST\": env(\"DB_HOST\"),\n        \"PORT\": env(\"DB_PORT\"),\n        \"OPTIONS\": {\"connect_timeout\": 10},\n    }",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\"\n    },\n    {\"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\"},\n    {\"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\"},\n    {\"NAME\": \"django.contrib.auth.password_validation.NumericPasswordValidator\"},\n]\n# ── Internationalisation ──────────────────────────────────────────────\nLANGUAGE_CODE = \"en-us\"",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# ── Static & Media ────────────────────────────────────────────────────\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# ── Static & Media ────────────────────────────────────────────────────\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────\nREST_FRAMEWORK = {",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# ── Static & Media ────────────────────────────────────────────────────\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────\nREST_FRAMEWORK = {\n    \"EXCEPTION_HANDLER\": \"core.exceptions.handlers.rich_exception_handler\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "USE_TZ = True\n# ── Static & Media ────────────────────────────────────────────────────\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────\nREST_FRAMEWORK = {\n    \"EXCEPTION_HANDLER\": \"core.exceptions.handlers.rich_exception_handler\",\n    \"DEFAULT_AUTHENTICATION_CLASSES\": [",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────\nREST_FRAMEWORK = {\n    \"EXCEPTION_HANDLER\": \"core.exceptions.handlers.rich_exception_handler\",\n    \"DEFAULT_AUTHENTICATION_CLASSES\": [\n        \"rest_framework_simplejwt.authentication.JWTAuthentication\",\n    ],",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────\nREST_FRAMEWORK = {\n    \"EXCEPTION_HANDLER\": \"core.exceptions.handlers.rich_exception_handler\",\n    \"DEFAULT_AUTHENTICATION_CLASSES\": [\n        \"rest_framework_simplejwt.authentication.JWTAuthentication\",\n    ],\n    \"DEFAULT_PERMISSION_CLASSES\": [",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────\nREST_FRAMEWORK = {\n    \"EXCEPTION_HANDLER\": \"core.exceptions.handlers.rich_exception_handler\",\n    \"DEFAULT_AUTHENTICATION_CLASSES\": [\n        \"rest_framework_simplejwt.authentication.JWTAuthentication\",\n    ],\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.IsAuthenticated\",",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / \"media\"\n# ── DRF ───────────────────────────────────────────────────────────────\nREST_FRAMEWORK = {\n    \"EXCEPTION_HANDLER\": \"core.exceptions.handlers.rich_exception_handler\",\n    \"DEFAULT_AUTHENTICATION_CLASSES\": [\n        \"rest_framework_simplejwt.authentication.JWTAuthentication\",\n    ],\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.IsAuthenticated\",\n    ],",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "REST_FRAMEWORK = {\n    \"EXCEPTION_HANDLER\": \"core.exceptions.handlers.rich_exception_handler\",\n    \"DEFAULT_AUTHENTICATION_CLASSES\": [\n        \"rest_framework_simplejwt.authentication.JWTAuthentication\",\n    ],\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.IsAuthenticated\",\n    ],\n    \"DEFAULT_PAGINATION_CLASS\": \"core.pagination.base.StandardPagination\",\n    \"PAGE_SIZE\": 20,",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "SPECTACULAR_SETTINGS",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "SPECTACULAR_SETTINGS = {\n    \"TITLE\": \"BaadFaad API\",\n    \"DESCRIPTION\": \"Project that splits your money among your friends\",\n    \"VERSION\": \"1.0.0\",\n    \"SERVE_INCLUDE_SCHEMA\": False,\n    # OTHER SETTINGS\n}\n# ── JWT ───────────────────────────────────────────────────────────────\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "SIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(\n        minutes=env.int(\"ACCESS_TOKEN_LIFETIME_MINUTES\")\n    ),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=env.int(\"REFRESH_TOKEN_LIFETIME_DAYS\")),\n    \"ROTATE_REFRESH_TOKENS\": True,\n    \"BLACKLIST_AFTER_ROTATION\": True,\n    \"AUTH_HEADER_TYPES\": (\"Bearer\",),\n}\n# ── Email ─────────────────────────────────────────────────────────────",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = env(\"EMAIL_HOST\")\nEMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "EMAIL_HOST = env(\"EMAIL_HOST\")\nEMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "EMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "EMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "EMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "config.settings.development",
+        "description": "config.settings.development",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\nCORS_ALLOWED_ORIGINS = [\"*\"]\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",",
+        "detail": "config.settings.development",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "config.settings.development",
+        "description": "config.settings.development",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\nCORS_ALLOWED_ORIGINS = [\"*\"]\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],",
+        "detail": "config.settings.development",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "config.settings.development",
+        "description": "config.settings.development",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\"*\"]\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],\n}",
+        "detail": "config.settings.development",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "config.settings.development",
+        "description": "config.settings.development",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],\n}",
+        "detail": "config.settings.development",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "config.settings.development",
+        "description": "config.settings.development",
+        "peekOfCode": "REST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],\n}",
+        "detail": "config.settings.development",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = env.list(\"ALLOWED_HOSTS\")\n# ── Security headers ──────────────────────────────────────────────────\nSECURE_HSTS_SECONDS = 31536000\nSECURE_HSTS_INCLUDE_SUBDOMAINS = True\nSECURE_HSTS_PRELOAD = True\nSECURE_SSL_REDIRECT = True\nSESSION_COOKIE_SECURE = True\nCSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "ALLOWED_HOSTS = env.list(\"ALLOWED_HOSTS\")\n# ── Security headers ──────────────────────────────────────────────────\nSECURE_HSTS_SECONDS = 31536000\nSECURE_HSTS_INCLUDE_SUBDOMAINS = True\nSECURE_HSTS_PRELOAD = True\nSECURE_SSL_REDIRECT = True\nSESSION_COOKIE_SECURE = True\nCSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_HSTS_SECONDS",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "SECURE_HSTS_SECONDS = 31536000\nSECURE_HSTS_INCLUDE_SUBDOMAINS = True\nSECURE_HSTS_PRELOAD = True\nSECURE_SSL_REDIRECT = True\nSESSION_COOKIE_SECURE = True\nCSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_HSTS_INCLUDE_SUBDOMAINS",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "SECURE_HSTS_INCLUDE_SUBDOMAINS = True\nSECURE_HSTS_PRELOAD = True\nSECURE_SSL_REDIRECT = True\nSESSION_COOKIE_SECURE = True\nCSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_HSTS_PRELOAD",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "SECURE_HSTS_PRELOAD = True\nSECURE_SSL_REDIRECT = True\nSESSION_COOKIE_SECURE = True\nCSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_SSL_REDIRECT",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "SECURE_SSL_REDIRECT = True\nSESSION_COOKIE_SECURE = True\nCSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION_COOKIE_SECURE",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "SESSION_COOKIE_SECURE = True\nCSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_COOKIE_SECURE",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "CSRF_COOKIE_SECURE = True\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_BROWSER_XSS_FILTER",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "SECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_CONTENT_TYPE_NOSNIFF",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "SECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ──────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via whitenoise ─────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_STORAGE",
+        "kind": 5,
+        "importPath": "config.settings.production",
+        "description": "config.settings.production",
+        "peekOfCode": "STATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "detail": "config.settings.production",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "config.asgi",
+        "description": "config.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "config.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "config.env",
+        "description": "config.env",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nenv = environ.Env(\n    DJANGO_ENV=(str, \"development\"),\n    DEBUG=(bool, False),\n    ALLOWED_HOSTS=(list, [\"localhost\", \"127.0.0.1\"]),\n    DB_PORT=(int, 5432),\n    ACCESS_TOKEN_LIFETIME_MINUTES=(int, 60),\n    REFRESH_TOKEN_LIFETIME_DAYS=(int, 7),\n    EMAIL_PORT=(int, 587),\n    EMAIL_USE_TLS=(bool, True),",
+        "detail": "config.env",
+        "documentation": {}
+    },
+    {
+        "label": "env",
+        "kind": 5,
+        "importPath": "config.env",
+        "description": "config.env",
+        "peekOfCode": "env = environ.Env(\n    DJANGO_ENV=(str, \"development\"),\n    DEBUG=(bool, False),\n    ALLOWED_HOSTS=(list, [\"localhost\", \"127.0.0.1\"]),\n    DB_PORT=(int, 5432),\n    ACCESS_TOKEN_LIFETIME_MINUTES=(int, 60),\n    REFRESH_TOKEN_LIFETIME_DAYS=(int, 7),\n    EMAIL_PORT=(int, 587),\n    EMAIL_USE_TLS=(bool, True),\n)",
+        "detail": "config.env",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "config.urls",
+        "description": "config.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/v1/user/\", include(\"apps.user.urls\")),\n    path(\"api/schema/\", SpectacularAPIView.as_view(), name=\"schema\"),\n    path(\n        \"api/docs/\",\n        SpectacularSwaggerView.as_view(url_name=\"schema\"),\n        name=\"swagger-ui\",\n    ),\n]",
+        "detail": "config.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "config.wsgi",
+        "description": "config.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "config.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "AppException",
+        "kind": 6,
+        "importPath": "core.exceptions.base",
+        "description": "core.exceptions.base",
+        "peekOfCode": "class AppException(Exception):\n    def __init__(\n        self,\n        message: str = \"Something went wrong\",\n        error_code: str = \"APP_ERROR\",\n        status_code: int = http_status.HTTP_500_INTERNAL_SERVER_ERROR,\n        details=None,\n    ):\n        self.message = message\n        self.error_code = error_code",
+        "detail": "core.exceptions.base",
+        "documentation": {}
+    },
+    {
+        "label": "rich_exception_handler",
+        "kind": 2,
+        "importPath": "core.exceptions.handlers",
+        "description": "core.exceptions.handlers",
+        "peekOfCode": "def rich_exception_handler(exc, context):\n    request = context.get(\"request\")\n    req = getattr(request, \"_request\", request)\n    rid = _req_id(req)\n    path = getattr(req, \"path\", \"N/A\")\n    method = getattr(req, \"method\", \"N/A\")\n    # ── 1. All custom AppException subclasses ─────────────────────────\n    if isinstance(exc, AppException):\n        console.print(\n            Panel(",
+        "detail": "core.exceptions.handlers",
+        "documentation": {}
+    },
+    {
+        "label": "console",
+        "kind": 5,
+        "importPath": "core.logging.logger",
+        "description": "core.logging.logger",
+        "peekOfCode": "console = Console(\n    theme=Theme(\n        {\n            \"info\": \"bold cyan\",\n            \"success\": \"bold green\",\n            \"warning\": \"bold yellow\",\n            \"error\": \"bold red\",\n            \"critical\": \"bold white on red\",\n            \"muted\": \"dim white\",\n        }",
+        "detail": "core.logging.logger",
+        "documentation": {}
+    },
+    {
+        "label": "RequestLoggingMiddleware",
+        "kind": 6,
+        "importPath": "core.logging.middleware",
+        "description": "core.logging.middleware",
+        "peekOfCode": "class RequestLoggingMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response\n    def __call__(self, request):\n        request.request_id = str(uuid.uuid4())[:8].upper()\n        start = time.perf_counter()\n        self._log_incoming(request)\n        response = self.get_response(request)\n        self._log_outgoing(\n            request, response.status_code, (time.perf_counter() - start) * 1000",
+        "detail": "core.logging.middleware",
+        "documentation": {}
+    },
+    {
+        "label": "METHOD_COLORS",
+        "kind": 5,
+        "importPath": "core.logging.middleware",
+        "description": "core.logging.middleware",
+        "peekOfCode": "METHOD_COLORS = {\n    \"GET\": \"bold bright_green\",\n    \"POST\": \"bold bright_blue\",\n    \"PUT\": \"bold bright_yellow\",\n    \"PATCH\": \"bold bright_cyan\",\n    \"DELETE\": \"bold bright_red\",\n}\nclass RequestLoggingMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response",
+        "detail": "core.logging.middleware",
+        "documentation": {}
+    },
+    {
+        "label": "StandardPagination",
+        "kind": 6,
+        "importPath": "core.pagination.base",
+        "description": "core.pagination.base",
+        "peekOfCode": "class StandardPagination(PageNumberPagination):\n    page_size = 20\n    page_size_query_param = \"page_size\"\n    max_page_size = 100\n    def get_paginated_response(self, data):\n        return success_response(\n            data={\n                \"count\": self.page.paginator.count,\n                \"next\": self.get_next_link(),\n                \"previous\": self.get_previous_link(),",
+        "detail": "core.pagination.base",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdmin",
+        "kind": 6,
+        "importPath": "core.permissions.base",
+        "description": "core.permissions.base",
+        "peekOfCode": "class IsAdmin(BasePermission):\n    def has_permission(self, request, view):\n        return bool(request.user and request.user.is_staff)\nclass IsOwner(BasePermission):\n    def has_object_permission(self, request, view, obj):\n        return obj.user == request.user\nclass IsAdminOrReadOnly(BasePermission):\n    def has_permission(self, request, view):\n        if request.method in (\"GET\", \"HEAD\", \"OPTIONS\"):\n            return True",
+        "detail": "core.permissions.base",
+        "documentation": {}
+    },
+    {
+        "label": "IsOwner",
+        "kind": 6,
+        "importPath": "core.permissions.base",
+        "description": "core.permissions.base",
+        "peekOfCode": "class IsOwner(BasePermission):\n    def has_object_permission(self, request, view, obj):\n        return obj.user == request.user\nclass IsAdminOrReadOnly(BasePermission):\n    def has_permission(self, request, view):\n        if request.method in (\"GET\", \"HEAD\", \"OPTIONS\"):\n            return True\n        return bool(request.user and request.user.is_staff)",
+        "detail": "core.permissions.base",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminOrReadOnly",
+        "kind": 6,
+        "importPath": "core.permissions.base",
+        "description": "core.permissions.base",
+        "peekOfCode": "class IsAdminOrReadOnly(BasePermission):\n    def has_permission(self, request, view):\n        if request.method in (\"GET\", \"HEAD\", \"OPTIONS\"):\n            return True\n        return bool(request.user and request.user.is_staff)",
+        "detail": "core.permissions.base",
+        "documentation": {}
+    },
+    {
+        "label": "success_response",
+        "kind": 2,
+        "importPath": "core.responses.api_response",
+        "description": "core.responses.api_response",
+        "peekOfCode": "def success_response(\n    message: str = \"Success\", data=None, status_code: int = 200\n) -> Response:\n    return Response(\n        {\n            \"success\": True,\n            \"message\": message,\n            \"data\": data,\n        },\n        status=status_code,",
+        "detail": "core.responses.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "error_response",
+        "kind": 2,
+        "importPath": "core.responses.api_response",
+        "description": "core.responses.api_response",
+        "peekOfCode": "def error_response(\n    error_code: str = \"UNKNOWN_ERROR\",\n    message: str = \"Something went wrong\",\n    status_code: int = 500,\n    details=None,\n) -> Response:\n    return Response(\n        {\n            \"success\": False,\n            \"message\": message,",
+        "detail": "core.responses.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    print(\"Hello from baadfaad!\")\nif __name__ == \"__main__\":\n    main()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    django_env = os.environ.get(\"DJANGO_ENV\", \"development\")\n    settings_module = f\"config.settings.{django_env}\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", settings_module)\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\"Couldn't import Django.\") from exc\n    execute_from_command_line(sys.argv)\nif __name__ == \"__main__\":",
+        "detail": "manage",
+        "documentation": {}
+    }
+]

@@ -1,7 +1,7 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = env("ALLOWED_HOSTS")
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
 # ── Security headers ──────────────────────────────────────────────────
 SECURE_HSTS_SECONDS = 31536000
