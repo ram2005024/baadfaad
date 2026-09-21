@@ -6,7 +6,7 @@ os.environ.setdefault(
     "DJANGO_SETTINGS_MODULE",
     "config.settings",
 )
-
+# app
 app = Celery("config")
 
 app.config_from_object(
