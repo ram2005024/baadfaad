@@ -940,7 +940,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = env.list(\"ALLOWED_HOSTS\")\n# ── Security ─────────────────────────────────────────────────────────\n# Temporary: HTTPS is not configured yet.\nSECURE_SSL_REDIRECT = False\nSESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\n# Enable these after HTTPS is configured.\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = env.list(\"ALLOWED_HOSTS\")\nSECURE_SSL_REDIRECT = False\nSESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -949,7 +949,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "ALLOWED_HOSTS = env.list(\"ALLOWED_HOSTS\")\n# ── Security ─────────────────────────────────────────────────────────\n# Temporary: HTTPS is not configured yet.\nSECURE_SSL_REDIRECT = False\nSESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\n# Enable these after HTTPS is configured.\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False",
+        "peekOfCode": "ALLOWED_HOSTS = env.list(\"ALLOWED_HOSTS\")\nSECURE_SSL_REDIRECT = False\nSESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -958,7 +958,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "SECURE_SSL_REDIRECT = False\nSESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\n# Enable these after HTTPS is configured.\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────",
+        "peekOfCode": "SECURE_SSL_REDIRECT = False\nSESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -967,7 +967,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "SESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\n# Enable these after HTTPS is configured.\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")",
+        "peekOfCode": "SESSION_COOKIE_SECURE = False\nCSRF_COOKIE_SECURE = False\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -976,7 +976,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "CSRF_COOKIE_SECURE = False\n# Enable these after HTTPS is configured.\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via WhiteNoise ────────────────────────────────────────────",
+        "peekOfCode": "CSRF_COOKIE_SECURE = False\nSECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -985,7 +985,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "SECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via WhiteNoise ────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "peekOfCode": "SECURE_HSTS_SECONDS = 0\nSECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -994,7 +994,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "SECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via WhiteNoise ────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "peekOfCode": "SECURE_HSTS_INCLUDE_SUBDOMAINS = False\nSECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -1003,7 +1003,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "SECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via WhiteNoise ────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "peekOfCode": "SECURE_HSTS_PRELOAD = False\nSECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -1012,7 +1012,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "SECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via WhiteNoise ────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "peekOfCode": "SECURE_BROWSER_XSS_FILTER = True\nSECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -1021,7 +1021,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "SECURE_CONTENT_TYPE_NOSNIFF = True\n# ── CORS ─────────────────────────────────────────────────────────────\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via WhiteNoise ────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "peekOfCode": "SECURE_CONTENT_TYPE_NOSNIFF = True\nCORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },
@@ -1030,7 +1030,7 @@
         "kind": 5,
         "importPath": "config.settings.production",
         "description": "config.settings.production",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\n# ── Static via WhiteNoise ────────────────────────────────────────────\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = env.list(\"CORS_ALLOWED_ORIGINS\")\nMIDDLEWARE.insert(1, \"whitenoise.middleware.WhiteNoiseMiddleware\")\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedManifestStaticFilesStorage\"",
         "detail": "config.settings.production",
         "documentation": {}
     },

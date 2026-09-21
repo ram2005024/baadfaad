@@ -15,6 +15,10 @@ env:
 
 jobs:
 
+  # ─────────────────────────────────────────────
+  # TEST
+  # ─────────────────────────────────────────────
+
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -40,28 +44,6 @@ jobs:
           DJANGO_SETTINGS_MODULE: config.settings.development
           SECRET_KEY: ci-test-secret
           DEBUG: "True"
-
-          DB_NAME: test
-          DB_USER: test
-          DB_PASSWORD: test
-          DB_HOST: localhost
-          DB_PORT: "5432"
-
-          REDIS_URL: redis://localhost:6379/0
-          CELERY_BROKER_URL: redis://localhost:6379/1
-          CELERY_RESULT_BACKEND: redis://localhost:6379/2
-
-          ACCESS_TOKEN_LIFETIME_MINUTES: "30"
-          REFRESH_TOKEN_LIFETIME_DAYS: "7"
-
-          EMAIL_HOST: localhost
-          EMAIL_PORT: "587"
-          EMAIL_HOST_USER: ""
-          EMAIL_HOST_PASSWORD: ""
-          EMAIL_USE_TLS: "False"
-
-          STORAGE_BACKEND: local
-
         run: uv run python manage.py check
 
       - name: Run tests
@@ -69,30 +51,12 @@ jobs:
           DJANGO_SETTINGS_MODULE: config.settings.development
           SECRET_KEY: ci-test-secret
           DEBUG: "True"
-
-          DB_NAME: test
-          DB_USER: test
-          DB_PASSWORD: test
-          DB_HOST: localhost
-          DB_PORT: "5432"
-
-          REDIS_URL: redis://localhost:6379/0
-          CELERY_BROKER_URL: redis://localhost:6379/1
-          CELERY_RESULT_BACKEND: redis://localhost:6379/2
-
-          ACCESS_TOKEN_LIFETIME_MINUTES: "30"
-          REFRESH_TOKEN_LIFETIME_DAYS: "7"
-
-          EMAIL_HOST: localhost
-          EMAIL_PORT: "587"
-          EMAIL_HOST_USER: ""
-          EMAIL_HOST_PASSWORD: ""
-          EMAIL_USE_TLS: "False"
-
-          STORAGE_BACKEND: local
-
         run: uv run pytest
 
+
+  # ─────────────────────────────────────────────
+  # BUILD
+  # ─────────────────────────────────────────────
 
   build:
     name: Build and Push
@@ -127,6 +91,10 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
 
 
+  # ─────────────────────────────────────────────
+  # DEPLOY
+  # ─────────────────────────────────────────────
+
   deploy:
     name: Deploy to EC2
     needs: build
@@ -157,7 +125,7 @@ jobs:
               --password-stdin
 
             echo "======================================"
-            echo "Pulling latest images"
+            echo "Pulling latest image"
             echo "======================================"
 
             docker compose pull
