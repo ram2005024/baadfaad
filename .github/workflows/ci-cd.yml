@@ -79,7 +79,7 @@ jobs:
           EMAIL_HOST_PASSWORD: ""
           EMAIL_USE_TLS: "False"
           STORAGE_BACKEND: local
-        run: uv run pytest --pass-with-no-tests
+        run: uv run pytest
 
 
   build:
