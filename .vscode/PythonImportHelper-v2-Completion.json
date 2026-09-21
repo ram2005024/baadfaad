@@ -1085,15 +1085,6 @@
     {
         "label": "main",
         "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def main():\n    print(\"Hello from baadfaad!\")\nif __name__ == \"__main__\":\n    main()",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 2,
         "importPath": "manage",
         "description": "manage",
         "peekOfCode": "def main():\n    django_env = os.environ.get(\"DJANGO_ENV\", \"development\")\n    settings_module = f\"config.settings.{django_env}\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", settings_module)\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\"Couldn't import Django.\") from exc\n    execute_from_command_line(sys.argv)\nif __name__ == \"__main__\":",
