@@ -215,6 +215,14 @@
         "documentation": {}
     },
     {
+        "label": "Celery",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -779,7 +787,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = env(\"EMAIL_HOST\")\nEMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.smtp.EmailBackend\"\nEMAIL_HOST = env(\"EMAIL_HOST\")\nEMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\n# ----- Caching------------------------------\nREDIS_URL = env(\"REDIS_URL\")\nCACHES = {",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -788,7 +796,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "EMAIL_HOST = env(\"EMAIL_HOST\")\nEMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "peekOfCode": "EMAIL_HOST = env(\"EMAIL_HOST\")\nEMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\n# ----- Caching------------------------------\nREDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -797,7 +805,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "EMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "peekOfCode": "EMAIL_PORT = env(\"EMAIL_PORT\")\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\n# ----- Caching------------------------------\nREDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -806,7 +814,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "EMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "peekOfCode": "EMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\n# ----- Caching------------------------------\nREDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -815,7 +823,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nEMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\n# ----- Caching------------------------------\nREDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -824,7 +832,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "EMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "peekOfCode": "EMAIL_USE_TLS = env(\"EMAIL_USE_TLS\")\nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER\n# ----- Caching------------------------------\nREDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -833,7 +841,52 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "DEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = EMAIL_HOST_USER\n# ----- Caching------------------------------\nREDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n        },",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "REDIS_URL",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "REDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n        },\n    },\n}",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "CACHES",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "CACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n        },\n    },\n}\nCELERY_BROKER_URL = env(\"CELERY_BROKER_URL\")",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BROKER_URL",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "CELERY_BROKER_URL = env(\"CELERY_BROKER_URL\")\nCELERY_RESULT_BACKEND = env(\"CELERY_RESULT_BACKEND\")\nSTORAGE_BACKEND = env(\"STORAGE_BACKEND\", default=\"local\")",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_BACKEND",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "CELERY_RESULT_BACKEND = env(\"CELERY_RESULT_BACKEND\")\nSTORAGE_BACKEND = env(\"STORAGE_BACKEND\", default=\"local\")",
+        "detail": "config.settings.base",
+        "documentation": {}
+    },
+    {
+        "label": "STORAGE_BACKEND",
+        "kind": 5,
+        "importPath": "config.settings.base",
+        "description": "config.settings.base",
+        "peekOfCode": "STORAGE_BACKEND = env(\"STORAGE_BACKEND\", default=\"local\")",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -842,7 +895,7 @@
         "kind": 5,
         "importPath": "config.settings.development",
         "description": "config.settings.development",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\nCORS_ALLOWED_ORIGINS = [\"*\"]\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\nCORS_ALLOW_ALL_ORIGINS = True\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",",
         "detail": "config.settings.development",
         "documentation": {}
     },
@@ -851,16 +904,16 @@
         "kind": 5,
         "importPath": "config.settings.development",
         "description": "config.settings.development",
-        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\nCORS_ALLOWED_ORIGINS = [\"*\"]\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\nCORS_ALLOW_ALL_ORIGINS = True\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],",
         "detail": "config.settings.development",
         "documentation": {}
     },
     {
-        "label": "CORS_ALLOWED_ORIGINS",
+        "label": "CORS_ALLOW_ALL_ORIGINS",
         "kind": 5,
         "importPath": "config.settings.development",
         "description": "config.settings.development",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\"*\"]\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],\n}",
+        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True\n# emails print to terminal, nothing sends\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# all endpoints open while building — tighten per-view with permission_classes\nREST_FRAMEWORK = {\n    **REST_FRAMEWORK,\n    \"DEFAULT_PERMISSION_CLASSES\": [\n        \"rest_framework.permissions.AllowAny\",\n    ],\n}",
         "detail": "config.settings.development",
         "documentation": {}
     },
@@ -997,6 +1050,15 @@
         "description": "config.asgi",
         "peekOfCode": "application = get_asgi_application()",
         "detail": "config.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "config.celery",
+        "description": "config.celery",
+        "peekOfCode": "app = Celery(\"config\")\napp.config_from_object(\n    \"django.conf:settings\",\n    namespace=\"CELERY\",\n)\napp.autodiscover_tasks()",
+        "detail": "config.celery",
         "documentation": {}
     },
     {

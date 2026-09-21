@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
-CORS_ALLOWED_ORIGINS = ["*"]
+CORS_ALLOW_ALL_ORIGINS = True
 # emails print to terminal, nothing sends
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 

@@ -161,3 +161,21 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = env("EMAIL_USE_TLS")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# ----- Caching------------------------------
+
+REDIS_URL = env("REDIS_URL")
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": REDIS_URL,
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    },
+}
+CELERY_BROKER_URL = env("CELERY_BROKER_URL")
+
+CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND")
+STORAGE_BACKEND = env("STORAGE_BACKEND", default="local")
