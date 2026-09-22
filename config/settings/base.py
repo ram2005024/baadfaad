@@ -187,3 +187,13 @@ CELERY_BROKER_URL = env("CELERY_BROKER_URL")
 
 CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND")
 STORAGE_BACKEND = env("STORAGE_BACKEND", default="local")
+
+
+STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
