@@ -1,5 +1,7 @@
 from datetime import timedelta
 
+from django.conf.global_settings import AUTH_USER_MODEL
+
 from config.env import BASE_DIR, env
 
 # ── Core ──────────────────────────────────────────────────────────────
@@ -9,7 +11,8 @@ DEBUG = env("DEBUG")
 ROOT_URLCONF = "config.urls"
 WSGI_APPLICATION = "config.wsgi.application"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
+# ------Auth Model---------------
+AUTH_USER_MODEL="user.User"
 
 # ── Apps ──────────────────────────────────────────────────────────────
 
