@@ -40,7 +40,7 @@ class User(AbstractUser, BaseModel):
 
 
     class Meta:
-        db_table = "user"
-        ordering = ["created_at"]
+        db_table= "user"
         verbose_name = "User"
         verbose_name_plural = "Users"
+
