@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from user.models import User
+
+from .exceptions import InvalidUser
+from .models import User
 
 
 @admin.register(User)
