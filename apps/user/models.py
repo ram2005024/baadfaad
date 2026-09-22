@@ -44,7 +44,7 @@ class User(AbstractUser, BaseModel):
         verbose_name = "User"
         verbose_name_plural = "Users"
 
-class Profile(models.Model):
+class Profile(BaseModel):
     user=models.OneToOneField(User,on_delete=models.CASCADE,related_name="profile")
     image=models.ImageField(upload_to="profiles/")
     full_name=models.CharField(max_length=200)
