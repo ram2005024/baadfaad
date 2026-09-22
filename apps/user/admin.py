@@ -7,13 +7,11 @@ class CustomUserAdmin(UserAdmin):
     list_display = ("email", "is_active", "is_staff", "created_at")
     search_fields = ("email",)
     ordering = ("email",)
-    # override fieldsets (remove username)
     fieldsets = (
         (None, {"fields": ("email", "password")}),
         ("Permissions", {"fields": ("is_active", "is_staff", "is_superuser", "groups", "user_permissions")}),
 
     )
-
     # override add_fieldsets (remove username)
     add_fieldsets = (
         (None, {
