@@ -17,4 +17,4 @@ REST_FRAMEWORK = {
 DEFAULT_FILE_STORAGES="storages.backends.s3boto3.S3Boto3Storage"
 AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
 AWS_S3_REGION_NAME = env("AWS_S3_REGION_NAME", default="ap-south-1")
-MEDIA_URL = f"https://{AWS_STORAGE_BU`CKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com/"
+MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com/"
