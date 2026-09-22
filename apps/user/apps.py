@@ -8,4 +8,4 @@ class UserConfig(AppConfig):
     verbose_name = "User"
 
     def ready(self):
-        pass  # import apps.<name>.signals here when needed
+        import apps.user.signals

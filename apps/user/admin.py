@@ -1,6 +1,13 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import User
+from .models import User,Profile
+
+class ProfileInline(admin.TabularInline):
+    model = Profile
+    can_delete = False
+    verbose_name = "Profile"
+    verbose_name_plural = "Profiles"
+
 
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
@@ -18,4 +25,6 @@ class CustomUserAdmin(UserAdmin):
             "fields": ("email", "password1", "password2", "is_active", "is_staff", "is_superuser"),
         }),
     )
+
+    inlines = (ProfileInline,)
     

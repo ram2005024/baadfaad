@@ -1,15 +1,14 @@
-from drf_spectacular.utils import extend_schema
-from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
-
-class UserListView(APIView):
-    @extend_schema(tags=["Users"])
-    def get(self, request):
-        return Response({"users": []})
+from apps.user.serializer import RegisterSerializer
+from core.responses.api_response import success_response
 
 
-class UserDetailView(APIView):
-    @extend_schema(tags=["Users"])
-    def get(self, request, pk):
-        return Response({"user_id": pk})
+class RegisterView(APIView):
+    permission_classes = [AllowAny]
+    def post(self,request):
+        serializer=RegisterSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return success_response(message="User created successfully")

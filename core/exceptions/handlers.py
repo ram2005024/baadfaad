@@ -1,10 +1,11 @@
-from django.http import JsonResponse
+
 from rest_framework.exceptions import (
     AuthenticationFailed,
     NotAuthenticated,
     PermissionDenied,
     ValidationError,
 )
+from rest_framework.response import Response
 from rest_framework.views import exception_handler as drf_exception_handler
 from rich.panel import Panel
 from rich.table import Table
@@ -48,7 +49,7 @@ def rich_exception_handler(exc, context):
                 expand=False,
             )
         )
-        return JsonResponse(
+        return Response(
             _error_body(exc.error_code, exc.message, exc.details),
             status=exc.status_code,
         )
@@ -87,7 +88,7 @@ def rich_exception_handler(exc, context):
             )
         )
         console.print(table)
-        return JsonResponse(
+        return Response(
             _error_body("VALIDATION_ERROR", "Request validation failed", formatted),
             status=422,
         )
@@ -104,7 +105,7 @@ def rich_exception_handler(exc, context):
                 expand=False,
             )
         )
-        return JsonResponse(
+        return Response(
             _error_body(
                 "NOT_AUTHENTICATED", "Authentication credentials were not provided."
             ),
@@ -123,7 +124,7 @@ def rich_exception_handler(exc, context):
                 expand=False,
             )
         )
-        return JsonResponse(
+        return Response(
             _error_body(
                 "PERMISSION_DENIED",
                 "You do not have permission to perform this action.",
@@ -145,7 +146,7 @@ def rich_exception_handler(exc, context):
                 expand=False,
             )
         )
-        return JsonResponse(
+        return Response(
             _error_body("HTTP_ERROR", str(exc)),
             status=response.status_code,
         )
@@ -163,7 +164,7 @@ def rich_exception_handler(exc, context):
         )
     )
     console.print_exception(show_locals=True)
-    return JsonResponse(
+    return Response(
         _error_body("SERVER_ERROR", "Something went wrong on the server"),
         status=500,
     )

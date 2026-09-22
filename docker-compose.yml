@@ -27,6 +27,8 @@ services:
         condition: service_healthy
     restart: unless-stopped
 
+
+
   celery:
     build:
       context: .

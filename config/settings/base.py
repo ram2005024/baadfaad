@@ -1,6 +1,5 @@
 from datetime import timedelta
 
-from django.conf.global_settings import AUTH_USER_MODEL
 
 from config.env import BASE_DIR, env
 
@@ -133,6 +132,11 @@ REST_FRAMEWORK = {
         "rest_framework.filters.OrderingFilter",
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
+    ],
+
 }
 
 SPECTACULAR_SETTINGS = {
