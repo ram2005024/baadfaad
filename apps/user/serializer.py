@@ -1,5 +1,8 @@
 from django.contrib.auth import get_user_model
+from django.db import transaction
 from rest_framework import serializers
+
+from apps.user.models import Profile
 
 USER_MODEL=get_user_model()
 class RegisterSerializer(serializers.ModelSerializer):
@@ -19,13 +22,12 @@ class RegisterSerializer(serializers.ModelSerializer):
         attrs["first_name"]=(attrs.get("first_name") or "").title()
         attrs["last_name"]=(attrs.get("last_name") or "").title()
         return attrs
+    @transaction.atomic
     def create(self, validated_data):
         image=validated_data.pop("image",None)
         password=validated_data.pop("password1")
         validated_data.pop("password2")
         user=USER_MODEL.objects.create_user(email=validated_data.pop("email"),password=password,**validated_data)
-        if image:
-            user.profile.image=image
-            user.profile.save()
+        Profile.objects.create(user=user,fullname=f"{user.first_name} {user.last_name}".strip(),image=image)
         return user
 

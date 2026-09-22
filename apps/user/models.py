@@ -46,6 +46,6 @@ class User(AbstractUser, BaseModel):
 
 class Profile(BaseModel):
     user=models.OneToOneField(User,on_delete=models.CASCADE,related_name="profile")
-    image=models.ImageField(upload_to="profiles/")
+    image=models.ImageField(upload_to="profiles/",null=True,blank=True)
     full_name=models.CharField(max_length=200)
 
