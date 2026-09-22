@@ -17,7 +17,6 @@ CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS")
 
 
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
 AWS_S3_REGION_NAME = env(
     "AWS_S3_REGION_NAME",
@@ -28,6 +27,9 @@ STORAGES = {
     "default": {
         "BACKEND": "storages.backends.s3.S3Storage",
     },
+    "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        },
 }
 
 MEDIA_URL = (
