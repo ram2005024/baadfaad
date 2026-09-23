@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenRefreshView
 
+from apps.user.exceptions import InvalidToken
 from apps.user.serializer import RegisterSerializer, LoginSerializer
 from config.env import env
 from core.exceptions.base import AppException
@@ -68,12 +69,12 @@ class RefreshView(TokenRefreshView):
         def post(self, request: Request, *args, **kwargs) -> Response:
             token=request.COOKIES.get("refresh",None)
             if not token:
-                raise ValueError("Token not found")
+                raise InvalidToken
             serializer=self.get_serializer(data={"refresh":token})
             try:
                 serializer.is_valid(raise_exception=True)
             except:
-                raise AppException(message="Invalid Token",error_code="INVALID_TOKEN",status_code=401)
+                raise InvalidToken
             response=Response({
                 "access":serializer.validated_data.get("access")
             })
