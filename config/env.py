@@ -13,6 +13,9 @@ env = environ.Env(
     REFRESH_TOKEN_LIFETIME_DAYS=(int, 7),
     EMAIL_PORT=(int, 587),
     EMAIL_USE_TLS=(bool, True),
+    # Tokens Default
+    SAME_SITE=(str,"none"),
+    SECURE=(bool,False)
 )
 
 environ.Env.read_env(BASE_DIR / ".env")

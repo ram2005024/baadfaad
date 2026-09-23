@@ -1,6 +1,7 @@
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, authenticate
 from django.db import transaction
 from rest_framework import serializers
+from rest_framework_simplejwt.tokens import RefreshToken
 
 from apps.user.models import Profile
 
@@ -31,3 +32,22 @@ class RegisterSerializer(serializers.ModelSerializer):
         Profile.objects.create(user=user,fullname=f"{user.first_name} {user.last_name}".strip(),image=image)
         return user
 
+
+class LoginSerializer(serializers.Serializer):
+    email=serializers.EmailField(required=True)
+    password=serializers.CharField(required=True,max_length=50)
+
+    def validate(self,attrs):
+        email=attrs["email"]
+        password=attrs["password"]
+
+        user=authenticate(request=self.context["request"],username=email,password=password)
+
+        if not user:
+            raise serializers.ValidationError("Invalid email or password")
+
+        refresh=RefreshToken.for_user(user)
+        return {
+            "access":refresh.access_token,
+            "refresh":str(refresh)
+        }
