@@ -1,17 +1,8 @@
+from drf_spectacular.utils import inline_serializer
+from rest_framework import serializers
 from rest_framework.response import Response
 
 
-def success_response(
-    message: str = "Success", data=None, status_code: int = 200
-) -> Response:
-    return Response(
-        {
-            "success": True,
-            "message": message,
-            "data": data,
-        },
-        status=status_code,
-    )
 
 
 def error_response(
@@ -28,4 +19,16 @@ def error_response(
             "details": details,
         },
         status=status_code,
+    )
+
+
+def get_paginated_serializer(serializer,name=None):
+    return inline_serializer(
+        name=name or f"{serializer.__name}List" ,
+        fields={
+                "count": serializers.IntegerField(),
+                "next": serializers.CharField(allow_null=True),
+                "previous": serializers.CharField(allow_null=True),
+                "results": serializer(many=True),
+        }
     )
