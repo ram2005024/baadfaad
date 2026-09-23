@@ -1,4 +1,7 @@
+from django.http.multipartparser import MultiPartParser
+from drf_spectacular.utils import extend_schema_serializer, extend_schema, extend_schema_view
 from rest_framework import generics
+from rest_framework.parsers import FormParser
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
@@ -6,7 +9,12 @@ from apps.user.serializer import RegisterSerializer, LoginSerializer
 from config.env import env
 from core.responses.api_response import success_response
 
-
+@extend_schema_view(
+    post=extend_schema(
+        tags=["Auth"],
+        request=RegisterSerializer
+    )
+)
 class RegisterView(APIView):
     permission_classes = [AllowAny]
     def post(self,request):
@@ -15,6 +23,9 @@ class RegisterView(APIView):
         serializer.save()
         return success_response(message="User created successfully")
 
+@extend_schema_view(
+    post=extend_schema(tags=["Auth"])
+)
 class LoginView(generics.CreateAPIView):
     serializer_class = LoginSerializer
     permission_classes = [AllowAny]
