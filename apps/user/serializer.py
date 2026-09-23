@@ -29,7 +29,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         password=validated_data.pop("password1")
         validated_data.pop("password2")
         user=USER_MODEL.objects.create_user(email=validated_data.pop("email"),password=password,**validated_data)
-        Profile.objects.create(user=user,fullname=f"{user.first_name} {user.last_name}".strip(),image=image)
+        Profile.objects.create(user=user,full_name=f"{user.first_name} {user.last_name}".strip(),image=image)
         return user
 
 
@@ -51,3 +51,13 @@ class LoginSerializer(serializers.Serializer):
             "access":str(refresh.access_token),
             "refresh":str(refresh)
         }
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Profile
+        fields=["id","full_name","image"]
+class UserSerializer(serializers.ModelSerializer):
+    profile=ProfileSerializer(read_only=True)
+    class Meta:
+        model=USER_MODEL
+        fields=["id","email","profile"]

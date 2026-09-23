@@ -9,7 +9,8 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenRefreshView
 
 from apps.user.exceptions import InvalidToken
-from apps.user.serializer import RegisterSerializer, LoginSerializer
+from apps.user.models import User
+from apps.user.serializer import RegisterSerializer, LoginSerializer, UserSerializer
 from config.env import env
 from core.exceptions.base import AppException
 
@@ -30,9 +31,9 @@ class RegisterView(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
 
-        return {
+        return Response({
             "message":"User created successfully"
-        }
+        },status=201)
 
 @extend_schema_view(
     post=extend_schema(tags=["Auth"],responses=inline_serializer(
@@ -90,6 +91,9 @@ class RefreshView(TokenRefreshView):
 
 @extend_schema(tags=["Auth"])
 class MeView(generics.RetrieveAPIView):
+    serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
     def get_object(self):
-        return self.request.user
+        return (
+            User.objects.select_related("profile").get(pk=self.request.user.pk)
+        )
