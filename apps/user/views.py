@@ -1,13 +1,17 @@
 
-from drf_spectacular.utils import extend_schema_serializer, extend_schema, extend_schema_view, inline_serializer
+from drf_spectacular.utils import  extend_schema, extend_schema_view, inline_serializer
 from rest_framework import generics, serializers
 from rest_framework.parsers import FormParser,MultiPartParser
 from rest_framework.permissions import AllowAny
+from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework_simplejwt.views import TokenRefreshView
 
 from apps.user.serializer import RegisterSerializer, LoginSerializer
 from config.env import env
+from core.exceptions.base import AppException
+
 
 class RegisterView(APIView):
     permission_classes = [AllowAny]
@@ -50,8 +54,35 @@ class LoginView(generics.CreateAPIView):
             },status=200)
         response.set_cookie(key="refresh",
                             value=serializer.validated_data["refresh"],
-                            path="/api/v1/auth/login",
+                            path="/",
                             httponly=True,
                             secure=env("SECURE"),
                             samesite=env("SAME_SITE"))
         return response
+
+@extend_schema(request=None,tags=["Auth"],
+responses=inline_serializer("RefreshViewSerializer",                                                      fields={
+    "access":serializers.CharField()
+}))
+class RefreshView(TokenRefreshView):
+        def post(self, request: Request, *args, **kwargs) -> Response:
+            token=request.COOKIES.get("refresh",None)
+            if not token:
+                raise ValueError("Token not found")
+            serializer=self.get_serializer(data={"refresh":token})
+            try:
+                serializer.is_valid(raise_exception=True)
+            except:
+                raise AppException(message="Invalid Token",error_code="INVALID_TOKEN",status_code=401)
+            response=Response({
+                "access":serializer.validated_data.get("access")
+            })
+            response.set_cookie(
+                key="refresh",
+                value=str(serializer.validated_data["refresh"]),
+                httponly=True,
+                samesite=env("SAME_SITE"),
+                secure=env("SECURE")
+
+            )
+            return response
