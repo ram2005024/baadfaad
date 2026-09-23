@@ -88,6 +88,7 @@ class RefreshView(TokenRefreshView):
             )
             return response
 
+@extend_schema(tags=["Auth"])
 class MeView(generics.RetrieveAPIView):
     permission_classes = [IsAuthenticated]
     def get_object(self):
