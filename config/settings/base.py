@@ -1,6 +1,5 @@
 from datetime import timedelta
 
-
 from config.env import BASE_DIR, env
 
 # ── Core ──────────────────────────────────────────────────────────────
@@ -11,7 +10,7 @@ ROOT_URLCONF = "config.urls"
 WSGI_APPLICATION = "config.wsgi.application"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ------Auth Model---------------
-AUTH_USER_MODEL="user.User"
+AUTH_USER_MODEL = "user.User"
 
 # ── Apps ──────────────────────────────────────────────────────────────
 
@@ -31,7 +30,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "django_filters",
     "drf_spectacular",
-    "storages"
+    "storages",
 ]
 
 LOCAL_APPS: list[str] = ["apps.user"]
@@ -138,7 +137,6 @@ REST_FRAMEWORK = {
         "rest_framework.renderers.JSONRenderer",
         "rest_framework.renderers.BrowsableAPIRenderer",
     ],
-
 }
 
 SPECTACULAR_SETTINGS = {
@@ -181,6 +179,7 @@ CACHES = {
         "LOCATION": REDIS_URL,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "SERIALIZER": "django_redis.serializers.json.JSONSerializer",
         },
     },
 }
@@ -191,10 +190,10 @@ STORAGE_BACKEND = env("STORAGE_BACKEND", default="local")
 
 
 STORAGES = {
-        "default": {
-            "BACKEND": "django.core.files.storage.FileSystemStorage",
-        },
-        "staticfiles": {
-            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-        },
-    }
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}

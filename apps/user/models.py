@@ -1,6 +1,7 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+
 from apps.user.exceptions import InvalidUser
 from common.base_model import BaseModel
 
@@ -29,7 +30,7 @@ class CustomBaseUserManager(BaseUserManager):
 class User(AbstractUser, BaseModel):
     email = models.EmailField(unique=True)
     username = None
-    is_verified=models.BooleanField(default=False)
+    is_verified = models.BooleanField(default=False)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
@@ -38,14 +39,15 @@ class User(AbstractUser, BaseModel):
     def __str__(self):
         return self.email
 
-
     class Meta:
-        db_table= "user"
+        db_table = "user"
         verbose_name = "User"
         verbose_name_plural = "Users"
 
-class Profile(BaseModel):
-    user=models.OneToOneField(User,on_delete=models.DB_CASCADE,related_name="profile")
-    image=models.ImageField(upload_to="profiles/",null=True,blank=True)
-    full_name=models.CharField(max_length=200)
 
+class Profile(BaseModel):
+    user = models.OneToOneField(
+        User, on_delete=models.DB_CASCADE, related_name="profile"
+    )
+    image = models.ImageField(upload_to="profiles/", null=True, blank=True)
+    full_name = models.CharField(max_length=200)
