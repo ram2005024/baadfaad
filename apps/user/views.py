@@ -1,4 +1,4 @@
-
+from django.contrib.auth import user_logged_in
 from drf_spectacular.utils import  extend_schema, extend_schema_view, inline_serializer
 from rest_framework import generics, serializers
 from rest_framework.parsers import FormParser,MultiPartParser
@@ -11,6 +11,7 @@ from rest_framework_simplejwt.views import TokenRefreshView
 from apps.user.exceptions import InvalidToken
 from apps.user.models import User
 from apps.user.serializer import RegisterSerializer, LoginSerializer, UserSerializer
+from apps.user.tasks import send_verification_message
 from config.env import env
 from core.exceptions.base import AppException
 
@@ -29,10 +30,10 @@ class RegisterView(APIView):
     def post(self, request):
         serializer = RegisterSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
-
+        user=serializer.save()
+        send_verification_message.delay(str(user.id))
         return Response({
-            "message":"User created successfully"
+            "message":"User created successfully.Please verify your account."
         },status=201)
 
 @extend_schema_view(

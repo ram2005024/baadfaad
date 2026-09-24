@@ -29,7 +29,7 @@ class CustomBaseUserManager(BaseUserManager):
 class User(AbstractUser, BaseModel):
     email = models.EmailField(unique=True)
     username = None
-    
+    is_verified=models.BooleanField(default=False)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
@@ -45,7 +45,7 @@ class User(AbstractUser, BaseModel):
         verbose_name_plural = "Users"
 
 class Profile(BaseModel):
-    user=models.OneToOneField(User,on_delete=models.CASCADE,related_name="profile")
+    user=models.OneToOneField(User,on_delete=models.DB_CASCADE,related_name="profile")
     image=models.ImageField(upload_to="profiles/",null=True,blank=True)
     full_name=models.CharField(max_length=200)
 
