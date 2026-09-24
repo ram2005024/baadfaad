@@ -4,6 +4,8 @@ from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from apps.user.models import Profile
+from apps.user.services import VerificationService
+from apps.user.tasks import send_verification_message
 
 USER_MODEL=get_user_model()
 class RegisterSerializer(serializers.ModelSerializer):
@@ -46,10 +48,12 @@ class LoginSerializer(serializers.Serializer):
         if not user:
             raise serializers.ValidationError("Invalid email or password")
 
+
         refresh=RefreshToken.for_user(user)
         return {
             "access":str(refresh.access_token),
-            "refresh":str(refresh)
+            "refresh":str(refresh),
+            "user":user
         }
 
 class ProfileSerializer(serializers.ModelSerializer):

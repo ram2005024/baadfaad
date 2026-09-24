@@ -8,9 +8,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenRefreshView
 
-from apps.user.exceptions import InvalidToken
+from apps.user.exceptions import InvalidToken, VerificationError
 from apps.user.models import User
 from apps.user.serializer import RegisterSerializer, LoginSerializer, UserSerializer
+from apps.user.services import VerificationService
 from apps.user.tasks import send_verification_message
 from config.env import env
 from core.exceptions.base import AppException
@@ -51,7 +52,12 @@ class LoginView(generics.CreateAPIView):
     def post(self, request, *args, **kwargs):
         serializer=self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-
+        user=serializer.validated_data["user"]
+        if not user.is_verified:
+            has_verification_sent = VerificationService().is_verification_expired(user.id)
+            if not has_verification_sent:
+                send_verification_message(user.id)
+            raise VerificationError
         response=Response(data={
                 "access":serializer.validated_data["access"]
             },status=200)

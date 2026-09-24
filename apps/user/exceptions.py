@@ -21,3 +21,14 @@ class InvalidToken(AppException):
         details=None,
     ):
         super().__init__(message, error_code, status_code, details)
+
+class VerificationError(AppException):
+    def __init__(
+        self,
+        message: str = "Please verify your account",
+        error_code: str = "VERIFICATION_ERROR",
+        status_code: int = status.HTTP_401_UNAUTHORIZED,
+        details=None,
+    ):
+        super().__init__(message, error_code, status_code, details)
+
