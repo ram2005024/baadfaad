@@ -1,10 +1,14 @@
+from linecache import cache
+
+
 from celery import shared_task
 from django.contrib.auth import get_user_model
+from django.core.cache import cache
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
+
 from apps.user.utils import generate_random_verification_code
-from config.settings import base
 
 USER_MODEL=get_user_model()
 @shared_task(bind=True)
@@ -20,6 +24,7 @@ def send_verification_message(self,user_id):
         msg=EmailMultiAlternatives(subject,message,from_email=from_email,to=to)
         msg.attach_alternative(html_string,"text/html")
         msg.send()
+        cache.set(f'user:{user_id}:code',code,timeout=300)
     except USER_MODEL.DoesNotExist:
         raise ValueError("User doesn't exist")
 
