@@ -1,10 +1,13 @@
 from django.core.cache import cache
 
+from config.redis import redis
+
 
 class VerificationService:
     CODE_TTL = 300
     ATTEMPT_TTL = 600
     MAX_ATTEMPT_COUNT = 5
+    RESEND_TTL = 60
 
     @staticmethod
     def _verification_key(user_id):
@@ -14,14 +17,18 @@ class VerificationService:
     def _attempt_key(user_id):
         return f"user:{user_id}:attempts"
 
+    @staticmethod
+    def _resend_key(user_id):
+        return f"user:{user_id}:resend"
+
     @classmethod
     def save_verification_code(cls, user_id, code):
-        cache.set(cls._verification_key(user_id), code, cls.CODE_TTL)
+        redis.set(cls._verification_key(user_id), code, cls.CODE_TTL)
 
     @classmethod
     def has_sent_verification_code(cls, user_id):
         key = cls._verification_key(user_id)
-        return cache.get(key)
+        return redis.get(key)
 
     @classmethod
     def check_verification_code(cls, code, user_id):
@@ -30,27 +37,46 @@ class VerificationService:
         if value:
             is_matched = code == value
             if is_matched:
-                cache.delete(cls._attempt_key(user_id))
-                cache.delete(cls._verification_key(user_id))
+                redis.delete(cls._attempt_key(user_id))
+                redis.delete(cls._verification_key(user_id))
                 return True
         cls.increase_attempt(user_id)
         return False
 
     @classmethod
     def set_attempt(cls, user_id):
-        cache.set(cls._attempt_key(user_id), 0, timeout=cls.ATTEMPT_TTL)
+        redis.set(cls._attempt_key(user_id), 0, ex=cls.ATTEMPT_TTL)
 
     @classmethod
     def has_attempt_exceeded(cls, user_id):
-        has_attempt = cache.get(cls._attempt_key(user_id))
+        has_attempt = redis.get(cls._attempt_key(user_id))
         if has_attempt:
-            return has_attempt > cls.MAX_ATTEMPT_COUNT
+            return int(has_attempt) > cls.MAX_ATTEMPT_COUNT
         return False
 
     @classmethod
     def increase_attempt(cls, user_id):
-        if cache.get(cls._attempt_key(user_id)):
-            cache.incr(key=cls._attempt_key(user_id), delta=1)
+        if redis.get(cls._attempt_key(user_id)):
+            redis.incr(cls._attempt_key(user_id))
         else:
             cls.set_attempt(user_id)
-            cache.incr(key=cls._attempt_key(user_id), delta=1)
+            redis.incr(name=cls._attempt_key(user_id))
+
+    @classmethod
+    def has_resend_key(cls, user_id):
+        key = cls._resend_key(user_id)
+        value = redis.get(key)
+        if not value:
+            return None, 0
+        ttl = redis.ttl(key)
+        if ttl <= 0:
+            print(key)
+            print(redis.keys("*"))
+            print(redis.get(key))
+            print(ttl, "Yaha xa hai brooooo")
+            return value, 0
+        return value, ttl
+
+    @classmethod
+    def set_resend_key(cls, user_id):
+        return redis.set(cls._resend_key(user_id), str(True), cls.RESEND_TTL)

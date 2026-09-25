@@ -434,6 +434,22 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "authenticate",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
@@ -522,6 +538,22 @@
         "documentation": {}
     },
     {
+        "label": "send_verification_message",
+        "importPath": "apps.user.tasks",
+        "description": "apps.user.tasks",
+        "isExtraImport": true,
+        "detail": "apps.user.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "send_verification_message",
+        "importPath": "apps.user.tasks",
+        "description": "apps.user.tasks",
+        "isExtraImport": true,
+        "detail": "apps.user.tasks",
+        "documentation": {}
+    },
+    {
         "label": "InvalidRequest",
         "importPath": "core.exceptions.common",
         "description": "core.exceptions.common",
@@ -543,6 +575,14 @@
         "description": "django.core.cache",
         "isExtraImport": true,
         "detail": "django.core.cache",
+        "documentation": {}
+    },
+    {
+        "label": "redis",
+        "importPath": "config.redis",
+        "description": "config.redis",
+        "isExtraImport": true,
+        "detail": "config.redis",
         "documentation": {}
     },
     {
@@ -659,6 +699,14 @@
     },
     {
         "label": "RegisterView",
+        "importPath": "apps.user.views",
+        "description": "apps.user.views",
+        "isExtraImport": true,
+        "detail": "apps.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "ResendView",
         "importPath": "apps.user.views",
         "description": "apps.user.views",
         "isExtraImport": true,
@@ -836,6 +884,14 @@
         "documentation": {}
     },
     {
+        "label": "ResendSerializer",
+        "importPath": "apps.user.serializer",
+        "description": "apps.user.serializer",
+        "isExtraImport": true,
+        "detail": "apps.user.serializer",
+        "documentation": {}
+    },
+    {
         "label": "UserSerializer",
         "importPath": "apps.user.serializer",
         "description": "apps.user.serializer",
@@ -849,14 +905,6 @@
         "description": "apps.user.serializer",
         "isExtraImport": true,
         "detail": "apps.user.serializer",
-        "documentation": {}
-    },
-    {
-        "label": "send_verification_message",
-        "importPath": "apps.user.tasks",
-        "description": "apps.user.tasks",
-        "isExtraImport": true,
-        "detail": "apps.user.tasks",
         "documentation": {}
     },
     {
@@ -926,6 +974,14 @@
     },
     {
         "label": "SpectacularAPIView",
+        "importPath": "drf_spectacular.views",
+        "description": "drf_spectacular.views",
+        "isExtraImport": true,
+        "detail": "drf_spectacular.views",
+        "documentation": {}
+    },
+    {
+        "label": "SpectacularRedocView",
         "importPath": "drf_spectacular.views",
         "description": "drf_spectacular.views",
         "isExtraImport": true,
@@ -1358,6 +1414,15 @@
         "documentation": {}
     },
     {
+        "label": "ResendSerializer",
+        "kind": 6,
+        "importPath": "apps.user.serializer",
+        "description": "apps.user.serializer",
+        "peekOfCode": "class ResendSerializer(serializers.Serializer):\n    email = serializers.EmailField(write_only=True)\n    message = serializers.CharField(read_only=True)\n    def validate(self, attrs: Any) -> Any:\n        email = attrs[\"email\"]\n        user = USER_MODEL.objects.get(email=email)\n        if not user:\n            raise serializers.ValidationError({\"email\": \"User doesnot exist\"})\n        if user.is_verified:\n            raise serializers.ValidationError(\"User already verified\")",
+        "detail": "apps.user.serializer",
+        "documentation": {}
+    },
+    {
         "label": "USER_MODEL",
         "kind": 5,
         "importPath": "apps.user.serializer",
@@ -1371,7 +1436,7 @@
         "kind": 6,
         "importPath": "apps.user.services",
         "description": "apps.user.services",
-        "peekOfCode": "class VerificationService:\n    CODE_TTL = 300\n    ATTEMPT_TTL = 600\n    MAX_ATTEMPT_COUNT = 5\n    @staticmethod\n    def _verification_key(user_id):\n        return f\"user:{user_id}:code\"\n    @staticmethod\n    def _attempt_key(user_id):\n        return f\"user:{user_id}:attempts\"",
+        "peekOfCode": "class VerificationService:\n    CODE_TTL = 300\n    ATTEMPT_TTL = 600\n    MAX_ATTEMPT_COUNT = 5\n    RESEND_TTL = 60\n    @staticmethod\n    def _verification_key(user_id):\n        return f\"user:{user_id}:code\"\n    @staticmethod\n    def _attempt_key(user_id):",
         "detail": "apps.user.services",
         "documentation": {}
     },
@@ -1389,7 +1454,7 @@
         "kind": 5,
         "importPath": "apps.user.urls",
         "description": "apps.user.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"auth/register/\", RegisterView.as_view(), name=\"user_register\"),\n    path(\"auth/login/\", LoginView.as_view(), name=\"user_login\"),\n    path(\"auth/refresh/\", RefreshView.as_view(), name=\"user_refresh\"),\n    path(\"auth/me/\", MeView.as_view(), name=\"user_refresh\"),\n    path(\"auth/verify/\", VerifyView.as_view(), name=\"user_verify\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"auth/register/\", RegisterView.as_view(), name=\"user_register\"),\n    path(\"auth/login/\", LoginView.as_view(), name=\"user_login\"),\n    path(\"auth/refresh/\", RefreshView.as_view(), name=\"user_refresh\"),\n    path(\"auth/me/\", MeView.as_view(), name=\"user_refresh\"),\n    path(\"auth/verify/\", VerifyView.as_view(), name=\"user_verify\"),\n    path(\"auth/resend/\", ResendView.as_view(), name=\"user_resend\"),\n]",
         "detail": "apps.user.urls",
         "documentation": {}
     },
@@ -1443,7 +1508,16 @@
         "kind": 6,
         "importPath": "apps.user.views",
         "description": "apps.user.views",
-        "peekOfCode": "class VerifyView(APIView):\n    serializer_class = VerifySerializer\n    def post(self, request):\n        serializer = self.serializer_class(data=request.data)\n        serializer.is_valid(raise_exception=True)\n        return Response(serializer.data)",
+        "peekOfCode": "class VerifyView(APIView):\n    serializer_class = VerifySerializer\n    def post(self, request):\n        serializer = self.serializer_class(data=request.data)\n        serializer.is_valid(raise_exception=True)\n        return Response(serializer.data)\n@extend_schema(tags=[\"Auth\"])\nclass ResendView(generics.CreateAPIView):\n    serializer_class = ResendSerializer\n    def create(self, request: Request, *args: Any, **kwargs: Any):",
+        "detail": "apps.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "ResendView",
+        "kind": 6,
+        "importPath": "apps.user.views",
+        "description": "apps.user.views",
+        "peekOfCode": "class ResendView(generics.CreateAPIView):\n    serializer_class = ResendSerializer\n    def create(self, request: Request, *args: Any, **kwargs: Any):\n        serializer = self.get_serializer(data=request.data)\n        serializer.is_valid(raise_exception=True)\n        return Response(serializer.data)",
         "detail": "apps.user.views",
         "documentation": {}
     },
@@ -1740,7 +1814,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "REDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            \"SERIALIZER\": \"django_redis.serializers.json.JSONSerializer\",\n        },\n    },",
+        "peekOfCode": "REDIS_URL = env(\"REDIS_URL\")\nCACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            \"SERIALIZER\": \"django_redis.serializers.json.JSONSerializer\",\n        },\n    }",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -1749,7 +1823,7 @@
         "kind": 5,
         "importPath": "config.settings.base",
         "description": "config.settings.base",
-        "peekOfCode": "CACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            \"SERIALIZER\": \"django_redis.serializers.json.JSONSerializer\",\n        },\n    },\n}",
+        "peekOfCode": "CACHES = {\n    \"default\": {\n        \"BACKEND\": \"django_redis.cache.RedisCache\",\n        \"LOCATION\": REDIS_URL,\n        \"OPTIONS\": {\n            \"CLIENT_CLASS\": \"django_redis.client.DefaultClient\",\n            \"SERIALIZER\": \"django_redis.serializers.json.JSONSerializer\",\n        },\n    }\n}",
         "detail": "config.settings.base",
         "documentation": {}
     },
@@ -2019,7 +2093,7 @@
         "kind": 5,
         "importPath": "config.urls",
         "description": "config.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/v1/\",include(\"apps.user.urls\")),\n    # DRF SPECTACULAR\n    path(\"api/schema/\", SpectacularAPIView.as_view(), name=\"schema\"),\n    path(\n        \"api/docs/\",\n        SpectacularSwaggerView.as_view(url_name=\"schema\"),\n        name=\"swagger-ui\",\n    ),",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/v1/\", include(\"apps.user.urls\")),\n    # DRF SPECTACULAR\n    path(\"api/schema/\", SpectacularAPIView.as_view(), name=\"schema\"),\n    path(\n        \"api/docs/\",\n        SpectacularSwaggerView.as_view(url_name=\"swagger_ui\"),\n        name=\"swagger-ui\",\n    ),",
         "detail": "config.urls",
         "documentation": {}
     },

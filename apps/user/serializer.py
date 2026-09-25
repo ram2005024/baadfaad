@@ -1,3 +1,5 @@
+from typing import Any
+
 from django.contrib.auth import authenticate, get_user_model
 from django.db import transaction
 from rest_framework import serializers
@@ -11,6 +13,7 @@ from apps.user.exceptions import (
 )
 from apps.user.models import Profile
 from apps.user.services import VerificationService
+from apps.user.tasks import send_verification_message
 from core.exceptions.common import InvalidRequest
 
 USER_MODEL = get_user_model()
@@ -109,4 +112,25 @@ class VerifySerializer(serializers.Serializer):
         user.is_verified = True
         user.save()
         attrs["message"] = "Verified Successfully"
+        return attrs
+
+
+class ResendSerializer(serializers.Serializer):
+    email = serializers.EmailField(write_only=True)
+    message = serializers.CharField(read_only=True)
+
+    def validate(self, attrs: Any) -> Any:
+        email = attrs["email"]
+        user = USER_MODEL.objects.get(email=email)
+        if not user:
+            raise serializers.ValidationError({"email": "User doesnot exist"})
+        if user.is_verified:
+            raise serializers.ValidationError("User already verified")
+        already_resent, remaining_ttl = VerificationService.has_resend_key(user.id)
+
+        if already_resent:
+            raise serializers.ValidationError(f"Please wait {remaining_ttl} seconds")
+        VerificationService.set_resend_key(user.id)
+        send_verification_message.delay(user.id)
+        attrs["message"] = "Resent code succesfully"
         return attrs

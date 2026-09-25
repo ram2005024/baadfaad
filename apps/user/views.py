@@ -1,3 +1,5 @@
+from typing import Any
+
 from drf_spectacular.utils import extend_schema, extend_schema_view, inline_serializer
 from rest_framework import generics, serializers
 from rest_framework.parsers import FormParser, MultiPartParser
@@ -12,6 +14,7 @@ from apps.user.models import User
 from apps.user.serializer import (
     LoginSerializer,
     RegisterSerializer,
+    ResendSerializer,
     UserSerializer,
     VerifySerializer,
 )
@@ -122,5 +125,15 @@ class VerifyView(APIView):
 
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        return Response(serializer.data)
+
+
+@extend_schema(tags=["Auth"])
+class ResendView(generics.CreateAPIView):
+    serializer_class = ResendSerializer
+
+    def create(self, request: Request, *args: Any, **kwargs: Any):
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data)

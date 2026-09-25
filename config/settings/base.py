@@ -172,7 +172,6 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # ----- Caching------------------------------
 
 REDIS_URL = env("REDIS_URL")
-
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -181,7 +180,7 @@ CACHES = {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "SERIALIZER": "django_redis.serializers.json.JSONSerializer",
         },
-    },
+    }
 }
 CELERY_BROKER_URL = env("CELERY_BROKER_URL")
 
