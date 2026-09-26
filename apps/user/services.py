@@ -1,4 +1,5 @@
 from django.core.cache import cache
+from sqlparse.utils import offset
 
 from config.redis import redis
 
@@ -97,3 +98,9 @@ class VerificationService:
     def set_reset_key(cls,user_id,token):
         keyword=cls._reset_key(user_id)
         return redis.set(keyword,token.encode(),cls.RESET_TTL)
+
+    @classmethod
+    def delete_reset_key(cls,user_id):
+        key=cls._reset_key(user_id)
+        if redis.get(key):
+            redis.delete(key)

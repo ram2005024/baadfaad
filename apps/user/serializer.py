@@ -164,6 +164,6 @@ class ResetSerializer(serializers.Serializer):
             raise InvalidOrExpiredToken
         user.set_password(new)
         user.save()
-
+        VerificationService.delete_reset_key(user.id)
         return attrs
 
