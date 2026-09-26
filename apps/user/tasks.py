@@ -15,6 +15,7 @@ USER_MODEL=get_user_model()
 @shared_task(bind=True)
 def send_verification_message(self,user_id):
     try:
+        VerificationService().save_verification_code(user_id,code)
         user=USER_MODEL.objects.get(id=user_id)
         code=generate_random_verification_code(6)
         subject="Account Verification"
@@ -25,7 +26,6 @@ def send_verification_message(self,user_id):
         msg=EmailMultiAlternatives(subject,message,from_email=from_email,to=to)
         msg.attach_alternative(html_string,"text/html")
         msg.send()
-        VerificationService().save_verification_code(user_id,code)
     except USER_MODEL.DoesNotExist:
         raise ValueError("User doesn't exist")
 
@@ -40,6 +40,7 @@ def send_reset_link_message(self,token,user_id):
     try:
         user=USER_MODEL.objects.get(id=user_id)
         link_url=f"{settings.FRONTEND_URL}/reset/{user_id}/{token}"
+        VerificationService.set_reset_key(user_id,token)
         subject="Reset Password Request"
         to=[user.email]
         from_email=settings.EMAIL_BACKEND

@@ -150,5 +150,7 @@ class PasswordForgetView(generics.CreateAPIView):
         serializer.is_valid(raise_exception=True)
         token=serializer.validated_data["token"]
         user_id=serializer.validated_data["user_id"]
+        if VerificationService.has_reset_sent(user_id):
+            return Response({"message": "Reset url has been sent to your email"}, status=status.HTTP_200_OK)
         send_reset_link_message.delay(token,user_id)
         return Response({"message":"Reset url has been sent to your email"},status=status.HTTP_200_OK)

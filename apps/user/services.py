@@ -8,10 +8,17 @@ class VerificationService:
     ATTEMPT_TTL = 600
     MAX_ATTEMPT_COUNT = 5
     RESEND_TTL = 60
+    RESET_TTL=3600
+
+
 
     @staticmethod
     def _verification_key(user_id):
         return f"user:{user_id}:code"
+
+    @staticmethod
+    def _reset_key(user_id):
+        return f"user:{user_id}:reset"
 
     @staticmethod
     def _attempt_key(user_id):
@@ -80,3 +87,13 @@ class VerificationService:
     @classmethod
     def set_resend_key(cls, user_id):
         return redis.set(cls._resend_key(user_id), str(True), cls.RESEND_TTL)
+
+    @classmethod
+    def has_reset_sent(cls,user_id):
+        key=cls._reset_key(user_id)
+        return cache.get(key)
+
+    @classmethod
+    def set_reset_key(cls,user_id,token):
+        keyword=cls._reset_key(user_id)
+        return cache.set(keyword,token.encode(),cls.RESET_TTL)
