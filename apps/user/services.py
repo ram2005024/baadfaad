@@ -91,9 +91,9 @@ class VerificationService:
     @classmethod
     def has_reset_sent(cls,user_id):
         key=cls._reset_key(user_id)
-        return cache.get(key)
+        return redis.get(key)
 
     @classmethod
     def set_reset_key(cls,user_id,token):
         keyword=cls._reset_key(user_id)
-        return cache.set(keyword,token.encode(),cls.RESET_TTL)
+        return redis.set(keyword,token.encode(),cls.RESET_TTL)
