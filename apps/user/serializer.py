@@ -11,7 +11,7 @@ from apps.user.exceptions import (
     InvalidCode,
     MaximumAttempt,
     TokenExpired,
-    UserAlreadyVerified,
+    UserAlreadyVerified, InvalidToken, InvalidOrExpiredToken,
 )
 from apps.user.models import Profile
 from apps.user.services import VerificationService
@@ -149,3 +149,19 @@ class ForgetSerializer(serializers.Serializer):
             "token":token,
             "user_id":user.id
         }
+
+class ResetSerializer(serializers.Serializer):
+    token=serializers.CharField(required=True)
+    uuid=serializers.UUIDField(required=True)
+    new_password=serializers.CharField(write_only=True)
+    def validate(self, attrs):
+        user_id=attrs["uuid"]
+        token=attrs["token"]
+        new=attrs["new_password"]
+        user=get_object_or_404(USER_MODEL,id=user_id)
+        if not default_token_generator.check_token(token=token,user=user):
+            raise InvalidOrExpiredToken
+        user.set_password(new)
+        user.save()
+
+

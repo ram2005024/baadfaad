@@ -78,3 +78,7 @@ class UserAlreadyVerified(AppException):
         details=None,
     ):
         super().__init__(message, error_code, status_code, details)
+
+class InvalidOrExpiredToken(AppException):
+    def __init__(self,message="Invalid or Expired Token",error_code="INVALID_OR_EXPIRED_TOKEN",status_code=status.HTTP_400_BAD_REQUEST):
+        super().__init__(message,error_code,status_code,details=None)
