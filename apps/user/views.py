@@ -1,7 +1,8 @@
 from typing import Any
+from urllib.parse import uses_fragment
 
 from drf_spectacular.utils import extend_schema, extend_schema_view, inline_serializer
-from rest_framework import generics, serializers
+from rest_framework import generics, serializers, status
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.request import Request
@@ -16,10 +17,10 @@ from apps.user.serializer import (
     RegisterSerializer,
     ResendSerializer,
     UserSerializer,
-    VerifySerializer,
+    VerifySerializer, ForgetSerializer,
 )
 from apps.user.services import VerificationService
-from apps.user.tasks import send_verification_message
+from apps.user.tasks import send_verification_message, send_reset_link_message
 from config.env import env
 
 
@@ -137,3 +138,17 @@ class ResendView(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data)
+
+@extend_schema(tags=["Auth"],responses=inline_serializer(name="ForgetResponseSerializer",fields={
+    "message":serializers.CharField()
+}))
+class PasswordForgetView(generics.CreateAPIView):
+    serializer_class = ForgetSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer=self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        token=serializer.validated_data["token"]
+        user_id=serializer.validated_data["user_id"]
+        send_reset_link_message.delay(token,user_id)
+        return Response({"message":"Reset url has been sent to your email"},status=status.HTTP_200_OK)

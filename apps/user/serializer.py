@@ -1,7 +1,9 @@
 from typing import Any
 
 from django.contrib.auth import authenticate, get_user_model
+from django.contrib.auth.tokens import default_token_generator
 from django.db import transaction
+from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -134,3 +136,16 @@ class ResendSerializer(serializers.Serializer):
         send_verification_message.delay(user.id)
         attrs["message"] = "Resent code succesfully"
         return attrs
+
+
+class ForgetSerializer(serializers.Serializer):
+    email=serializers.EmailField(required=True)
+
+    def validate(self, attrs):
+        email=attrs["email"]
+        user=get_object_or_404(USER_MODEL,email=email)
+        token=default_token_generator.make_token(user)
+        return {
+            "token":token,
+            "user_id":user.id
+        }

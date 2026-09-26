@@ -1,5 +1,7 @@
 from datetime import timedelta
 
+from django.conf.global_settings import PASSWORD_RESET_TIMEOUT
+
 from config.env import BASE_DIR, env
 
 # ── Core ──────────────────────────────────────────────────────────────
@@ -196,3 +198,8 @@ STORAGES = {
         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
+
+
+# Basic ENVS
+PASSWORD_RESET_TIMEOUT
+FRONTEND_URL=env("FRONTEND_URL")

@@ -6,7 +6,7 @@ from apps.user.views import (
     RefreshView,
     RegisterView,
     ResendView,
-    VerifyView,
+    VerifyView, PasswordForgetView,
 )
 
 urlpatterns = [
@@ -16,4 +16,5 @@ urlpatterns = [
     path("auth/me/", MeView.as_view(), name="user_refresh"),
     path("auth/verify/", VerifyView.as_view(), name="user_verify"),
     path("auth/resend/", ResendView.as_view(), name="user_resend"),
+    path("auth/forget/", PasswordForgetView.as_view(), name="user_forget"),
 ]

@@ -35,3 +35,25 @@ def send_verification_message(self,user_id):
             countdown=10,
             max_retries=3
         )
+@shared_task(bind=True)
+def send_reset_link_message(self,token,user_id):
+    try:
+        user=USER_MODEL.objects.get(id=user_id)
+        link_url=f"{settings.FRONTEND_URL}/reset/{user_id}/{token}"
+        subject="Reset Password Request"
+        to=[user.email]
+        from_email=settings.EMAIL_BACKEND
+        message=f"Your reset link is {link_url}.You can open this link to reset your password"
+        html_string=render_to_string("email/reset_email.html",{"user":user,"reset_link":link_url})
+        msg=EmailMultiAlternatives(subject,message,from_email=from_email,to=to)
+        msg.attach_alternative(html_string,"text/html")
+        msg.send()
+    except USER_MODEL.DoesNotExist:
+        raise ValueError("User doesn't exist")
+
+    except Exception as e:
+        self.retry(
+            exc=e,
+            countdown=10,
+            max_retries=3
+        )

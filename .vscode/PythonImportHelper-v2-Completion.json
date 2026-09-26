@@ -965,6 +965,14 @@
         "documentation": {}
     },
     {
+        "label": "get_redis_connection",
+        "importPath": "django_redis",
+        "description": "django_redis",
+        "isExtraImport": true,
+        "detail": "django_redis",
+        "documentation": {}
+    },
+    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
@@ -2093,7 +2101,7 @@
         "kind": 5,
         "importPath": "config.urls",
         "description": "config.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/v1/\", include(\"apps.user.urls\")),\n    # DRF SPECTACULAR\n    path(\"api/schema/\", SpectacularAPIView.as_view(), name=\"schema\"),\n    path(\n        \"api/docs/\",\n        SpectacularSwaggerView.as_view(url_name=\"swagger_ui\"),\n        name=\"swagger-ui\",\n    ),",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"api/v1/\", include(\"apps.user.urls\")),\n    # DRF SPECTACULAR\n    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),\n    # Optional UI:\n    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),\n    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),\n]\nif settings.DEBUG:",
         "detail": "config.urls",
         "documentation": {}
     },
