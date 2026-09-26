@@ -22,13 +22,15 @@ def error_response(
     )
 
 
-def get_paginated_serializer(serializer,name=None):
+def get_paginated_serializer(serializer, name=None):
     return inline_serializer(
-        name=name or f"{serializer.__name}List" ,
+        name=name or f"{serializer.__name__}List",
         fields={
-                "count": serializers.IntegerField(),
-                "next": serializers.CharField(allow_null=True),
-                "previous": serializers.CharField(allow_null=True),
-                "results": serializer(many=True),
-        }
+            "pages": serializers.IntegerField(),
+            "has_next": serializers.BooleanField(),
+            "has_previous": serializers.BooleanField(),
+            "total": serializers.IntegerField(),
+            "filtered": serializers.IntegerField(),
+            "data": serializer(many=True),
+        },
     )
