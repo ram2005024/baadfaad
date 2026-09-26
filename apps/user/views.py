@@ -7,7 +7,7 @@ from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.request import Request
 from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework.views import APIView, set_rollback
 from rest_framework_simplejwt.views import TokenRefreshView
 
 from apps.user.exceptions import InvalidToken, VerificationError
@@ -17,7 +17,7 @@ from apps.user.serializer import (
     RegisterSerializer,
     ResendSerializer,
     UserSerializer,
-    VerifySerializer, ForgetSerializer,
+    VerifySerializer, ForgetSerializer, ResetSerializer,
 )
 from apps.user.services import VerificationService
 from apps.user.tasks import send_verification_message, send_reset_link_message
@@ -154,3 +154,14 @@ class PasswordForgetView(generics.CreateAPIView):
             return Response({"message": "Reset url has been sent to your email"}, status=status.HTTP_200_OK)
         send_reset_link_message.delay(token,user_id)
         return Response({"message":"Reset url has been sent to your email"},status=status.HTTP_200_OK)
+@extend_schema(tags=["Auth"],
+               request=ResetSerializer,responses=inline_serializer(name="ResetSerializerResponse",fields={
+    "message":serializers.CharField()
+}))
+class PasswordResetView(APIView):
+    def post(self):
+        serializer=ResetSerializer(data=self.request.data)
+        serializer.is_valid(raise_exception=True)
+        return Response({
+            "message":"Password reset successfully"
+        })
