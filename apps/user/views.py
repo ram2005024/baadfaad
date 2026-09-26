@@ -154,13 +154,15 @@ class PasswordForgetView(generics.CreateAPIView):
             return Response({"message": "Reset url has been sent to your email"}, status=status.HTTP_200_OK)
         send_reset_link_message.delay(token,user_id)
         return Response({"message":"Reset url has been sent to your email"},status=status.HTTP_200_OK)
+
+
 @extend_schema(tags=["Auth"],
                request=ResetSerializer,responses=inline_serializer(name="ResetSerializerResponse",fields={
     "message":serializers.CharField()
 }))
 class PasswordResetView(APIView):
-    def post(self):
-        serializer=ResetSerializer(data=self.request.data)
+    def post(self,request):
+        serializer=ResetSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response({
             "message":"Password reset successfully"

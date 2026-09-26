@@ -158,10 +158,12 @@ class ResetSerializer(serializers.Serializer):
         user_id=attrs["uuid"]
         token=attrs["token"]
         new=attrs["new_password"]
-        user=get_object_or_404(USER_MODEL,id=user_id)
-        if not default_token_generator.check_token(token=token,user=user):
+        user=get_object_or_404(USER_MODEL,pk=user_id)
+        if not default_token_generator.check_token(user,token):
+            print(token,user)
             raise InvalidOrExpiredToken
         user.set_password(new)
         user.save()
 
+        return attrs
 
